@@ -1,0 +1,14 @@
+div.marche{
+    display: flex;
+    justify-content: space-around;
+}
+#or{
+    padding-top:25px;
+    font-size: 100px;
+    font-family: 'Courgette', cursive;
+}
+body {
+    background-color : grey;
+
+    margin:0;
+}
