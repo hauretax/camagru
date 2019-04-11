@@ -1,20 +1,12 @@
 <?php
 class database{
     private $_host = "mysql:host=localhost;dbname=camagru";
-    private $_username = 'root';
-    private $_password = "Azeqsd1597538462";
+    private $_username = 'camagru';
+    private $_password = "Qsc123";
     private $_bdd;
 
     public function getHost (){
         return $this->_host;
-    }
-
-    public function getUsername(){
-        return $this->_username;
-    }
-
-    public function getPassword(){
-        return $this->_password;
     }
     
     public function getbdd(){
@@ -27,7 +19,7 @@ class database{
     
     public function connexion(){
         try{
-            $this->setBdd(new PDO($this->getHost(), $this->getUsername(), $this->getPassword()));
+            $this->setBdd(new PDO($this->_host, $this->_username, $this->_password));
         }
         catch (Exception $e){
             die ('Erreur : ' . $e->getMessage());
@@ -37,8 +29,6 @@ class database{
     public function addMember(){
         return 'INSERT INTO user(login, password, mail) VALUES (:login, :password, :mail)';
     }
+
 }
-
-
 ?>
-

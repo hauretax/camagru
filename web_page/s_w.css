@@ -2,6 +2,14 @@ div.marche{
     display: flex;
     justify-content: space-around;
 }
+
+h1.head {
+    width: 100%;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #or{
     padding-top:25px;
     font-size: 100px;
