@@ -12,6 +12,9 @@
                 <?php include "../user/log-in.php"; ?>
             </div></a>
         </div>
+        <div class=centre>
+            <?php include "../script/cam.php"; ?>
+        </div>
             <footer>
 
     </footer>
