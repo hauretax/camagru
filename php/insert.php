@@ -8,7 +8,7 @@ function insertMember()
         $bdd->connexion();
         $query = $bdd->getBdd()->query('SELECT * FROM user');
         foreach($query as $e){
-            if($_POST['login'] === $e['login'] && $_POST['mail'] === $e['mail']){
+            if($_POST['login'] === $e['login'] || $_POST['mail'] === $e['mail']){
                header('Location: ../web_page/welcome.php');
             }
         }
@@ -24,6 +24,7 @@ function insertMember()
                 'mail' => $mail
             );
             $query->execute($array);
+            mkdir('../user/'.$login);
         }
     }
 }

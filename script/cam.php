@@ -1,6 +1,21 @@
 <video id="video"></video>
 <button id="startbutton">Prendre une photo</button>
 <canvas id="canvas"></canvas>
+<button id="save">save la photo</button>
+<?php// echo base64_encode(file_get_contents('../icon/W.png') );?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$("#save").click(function()  {
+  $.ajax({
+     type: "POST",
+     url: '../php/get_picture.php',
+     dataType: 'text',
+     data:  {
+    image : document.getElementById("canvas").toDataURL()
+    }
+  });
+});
+</script>
 <script>
 (function() {
 
@@ -48,8 +63,6 @@ function takepicture() {
   canvas.width = width;
   canvas.height = height;
   canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-  var data = canvas.toDataURL('image/png');
-  photo.setAttribute('src', data);
 }
 
 startbutton.addEventListener('click', function(ev){

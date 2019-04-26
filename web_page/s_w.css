@@ -1,6 +1,20 @@
 div.marche{
     display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: white;
+    width: 320px;
+    top : 20px;
+    height: 292px;
+    border-radius: 10px;
 }
+
+div.log{
+    text-align:center ;
+}
+
 div.head{
     background-image: linear-gradient(purple, pink);
 
@@ -8,31 +22,18 @@ div.head{
     width: 100%;
     height: 100px;
 }
-a.log{
-width: 50%;
-}
-div.log{
-    position: relative;
-    top: -20px;
+
+div.sign{
     text-align:center ;
 }
 
-a.sign{
-    width: 50%;
-}
-div.sign{
-    position: relative;
-    top: -20px;
-    text-align:center ;
-}
 h1.head {
     width: 100%;
     position: relative;
     top :30px;
     text-align:center;
 }
-form {display:none;}
-body div div div:hover form{display: block;}
+
 body {
     background-color : grey;
 
