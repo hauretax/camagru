@@ -1,5 +1,6 @@
 <html>
     <header>
+    <meta charset="utf-8">
         <link href="s_w.css" rel="stylesheet" media="all" type="text/css">
     </header>
     <div class=head>
