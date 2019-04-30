@@ -10,6 +10,7 @@ class database{
     }
     
     public function getbdd(){
+        echo "coucou";
         return $this->_bdd;
     }
 

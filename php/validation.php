@@ -7,6 +7,7 @@ $login = $_GET['log'];
 $cle = $_GET['cle'];
 
 $stmt = $dbh->prepare("SELECT cle,actif FROM user WHERE login like :login");
+echo ("OK");/*
 if($stmt->execute(array('login' => $login)) && $row = $stmt->fetch()){
     $clebdd = $row['cle'];
     $actif = $row['actif'];
