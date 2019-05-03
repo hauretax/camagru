@@ -10,7 +10,6 @@ class database{
     }
     
     public function getbdd(){
-        echo "coucou";
         return $this->_bdd;
     }
 
@@ -28,7 +27,7 @@ class database{
     }
 
     public function addMember(){
-        return 'INSERT INTO user(login, password, mail) VALUES (:login, :password, :mail)';
+        return 'INSERT INTO user(login, password, mail, cle) VALUES (:login, :password, :mail, :cle)';
     }
 
 }

@@ -6,27 +6,22 @@ $bdd->connexion();
 $login = $_GET['log'];
 $cle = $_GET['cle'];
 
-$stmt = $dbh->prepare("SELECT cle,actif FROM user WHERE login like :login");
-echo ("OK");/*
-if($stmt->execute(array('login' => $login)) && $row = $stmt->fetch()){
-    $clebdd = $row['cle'];
-    $actif = $row['actif'];
-  }
-
-if ($actif == '1'){
-    echo "u are already activated";
-}
-
-else{
-    if($cle == $clebdd)
-    {
-        echo "u are now activate";
-        $stmt = $dbh->prepare ("UPDATE user SET actif = 1 WHERE login like :login");
-        $stmt->bindParam(':login', $login);
-        $stmt->execute();
+$query = $bdd->getBdd()->query('SELECT * FROM user WHERE login = \''.$login.'\'');
+foreach($query as $e){
+    if($login === $e['login']){
+        if($cle === $e['cle']){
+            if ($e['actif'] !== '1'){
+                $stmt = $bdd->getBdd()->prepare ('UPDATE user SET actif = 1 WHERE login = \''.$login.'\'');
+                $stmt->execute();
+                echo"ur acounte have been activated come back on <a href=\"../web_page/Welcome.php\">home page</a>";
+            }
+            else
+                echo "already activated";
+        }
+        else
+            echo "ok";
     }
-    else{
-        echo "Shomting block u";
-    }
+    else
+        echo "bad login";
 }
 ?>
