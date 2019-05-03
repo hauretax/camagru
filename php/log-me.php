@@ -1,20 +1,35 @@
 <?php
 session_start();
-require_once 'database.php';
+function logMember()
+{
+    require_once 'database.php';
 
-    if($_POST['login'] !== "" && $_POST['p'] !== "" && $_POST['submit'] === "OK"){
         $bdd = new database();
         $bdd->connexion();
-        $query = $bdd->getBdd()->query('SELECT * FROM user');
-        foreach($query as $e){
-            $password = hash ('whirlpool', $_POST['p']);
-            if ($_POST['login'] === $e['login'] && $password === $e['password']){
-                $_SESSION['a_user'] = "";
-                header('Location: ../web_page/welcome.php');
-            }
+        $password = hash ('whirlpool', $_POST['p']);
+        $query = $bdd->getBdd()->query('SELECT * FROM user  WHERE login = \''.$_POST['login'].'\'');
+        $data = $query->fetch();
+        if ($data['actif'] != '1'){
+            $_SESSION['a_user'] = "";
+            $_SESSION['error'] = "ur acount is not activated";
+            header('Location: ../web_page/welcome.php');
+            exit; 
         }
-        $_SESSION['a_user'] = $_POST['login'];
-        header('Location: ../web_page/user-page.php');
-
+        if ($data)
+            if ($password === $data['password']){
+                $_SESSION['a_user'] = $_POST['login'];
+                $_SESSION['error'] = "";
+                header('Location: ../web_page/user-page.php');
+                exit;
+            }
+        else
+            $_SESSION['a_user'] = "";
+            $_SESSION['error'] = "not good login or password";
     }
+    
+    if($_POST['login'] !== "" && $_POST['p'] !== "" && $_POST['submit'] === "OK"){
+        logMember();
+        header('Location: ../web_page/welcome.php');;
+}
+
 ?>

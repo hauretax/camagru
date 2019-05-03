@@ -38,7 +38,7 @@ function insertMember()
                 $message = "Venez prendre des photo !
                 
                 Mais tout dabors vous allez devoir activer votre compte, veulliez cliquer sur le lien ci desssous:
-                http://localhost:8075/demo/camagru/php/validation.php?log=".urlencode($login).'&cle='.urlencode($cle) . '
+                http://localhost/php/validation.php?log=".urlencode($login).'&cle='.urlencode($cle) . '
     
     
                 ---------------

@@ -1,8 +1,11 @@
 <?php
 class database{
-    private $_host = "mysql:host=localhost;dbname=camagru";
-    private $_username = 'camagru';
-    private $_password = "Qsc123";
+    //private $_host = "mysql:host=localhost;dbname=camagru";
+    private $_host = "mysql:host=db;dbname=camagru";
+    private $_username = 'root';
+    private $_password = 'test';
+    //private $_username = 'camagru';
+    //private $_password = "Qsc123";
     private $_bdd;
 
     public function getHost (){
