@@ -45,7 +45,8 @@ function insertMember()
                 Ceci est un mail automatique, Merci de ne pas y répondre.';
                 $headers = "From:" . $from;
                 mail($_POST['mail'],$subject,$message,$headers);
-
+                if(!(file_exists('../user')));
+                    mkdir('../user');
                 mkdir('../user/'.$login);
                 $_SESSION['error'] = "account created go look ur mai ;)";
             }

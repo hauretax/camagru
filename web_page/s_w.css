@@ -33,6 +33,16 @@ h1.head {
     top :30px;
     text-align:center;
 }
+#familytoad{
+    width:350px;
+    height: 80px;
+    background: radial-gradient(circle at 50%, #fff, #fff 70%, grey 100%, #fff 75%);
+    border-radius: 10px;
+}
+
+#vide {
+    transform: scaleX(-1);
+}
 
 body {
     background-color : grey;
