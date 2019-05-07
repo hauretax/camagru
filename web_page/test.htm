@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)http://story-makers.com/en/article/entrepreneurship-escp-europe -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                
+    <title></title>
+    <meta name="description" content="">
+    <script async="" src="./entrepreneurship-escp-europe_files/analytics.js"></script><script src="./entrepreneurship-escp-europe_files/jquery-1.10.1.min.js"></script>
+    <script src="./entrepreneurship-escp-europe_files/d3.v3.min.js" charset="utf-8"></script>
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-40332764-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+                    	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_361/hero_background1426277725.jpg">
+ 	     
+  	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_362/hero_background1426277935.jpg">
+ 	     
+  	     
+  	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_367/hero_background1426278974.jpg">
+ 	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_368/hero_background1426279491.jpg">
+ 	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_369/hero_background1426280264.png">
+ 	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_370/hero_background1426280841.jpg">
+ 	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_376/hero_background1426281388.jpg">
+ 	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_378/hero_background1426282644.jpg">
+ 	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_379/hero_background1426282020.jpg">
+ 	     
+  	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_390/hero_background1426320828.jpg">
+ 	     
+  	            <meta property="og:image" content="http://www.uniteddonations.eu/data/sections/section_380/hero_background1426282852.png">
+ 	     
+  	     
+  <meta name="title" property="og:title" content="entrepreneurship@ESCP Europe">
+<meta name="description" property="og:description" content="Découvrez notre Storymaker">
+<meta property="og:site_name" content="Storymaker">
+            <link rel="stylesheet" type="text/css" href="./entrepreneurship-escp-europe_files/css">
+        <link rel="stylesheet" href="./entrepreneurship-escp-europe_files/fb026b0.css">
+  
+  
+                            <link rel="icon" type="image/x-icon" href="http://story-makers.com/favicon_smk.ico">
+        
+    </head>
+    <body style="">
+        
+    
+        
+        
+
+
+        
+                
+        	
+
+    <div id="up"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></div>
+    <div id="down"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></div>
+    <style>
+        #down {z-index: 100; position: fixed; bottom:30px; height:30px; width:30px; right:25px; background: #222 url(//assets.strikingly.com/assets/editor2/nav-next-6abd795f84eae1e53cfbca1edb7f93e8.png) no-repeat 5px 5px;}
+        #up {z-index: 100; position: fixed; bottom:70px; height:30px; width:30px; right:25px; background: #222 url(//assets.strikingly.com/assets/editor2/nav-prev-69c0ce73de717a825bb1df7797444af1.png) no-repeat 5px 5px;}
+
+
+        #up:hover {background:#383838 url(//assets.strikingly.com/assets/editor2/nav-prev-69c0ce73de717a825bb1df7797444af1.png) no-repeat 5px 5px;}
+        #down:hover {background:#383838 url(//assets.strikingly.com/assets/editor2/nav-next-6abd795f84eae1e53cfbca1edb7f93e8.png) no-repeat 5px 5px;}
+
+    
+    </style>
+ <script>
+var init=false;
+var index=0;
+var tab=new Array();
+
+$(document).ready(function(){
+setInterval(function (){
+if (init==false)
+{
+tab=new Array();
+for (var i=0;i<link.length;i++)
+{
+var t=$('#'+link[i]).position();
+tab.push(t.top);
+
+}
+//console.log('fin boucle ');
+var t=$('.stripe').position();
+tab.push(t.top);
+//console.log(t.top);
+//console.log(' fin top')
+//init=true;
+}
+
+index=0;
+for (var i=0;i<tab.length;i++)
+{
+        if ($(document).scrollTop()>=tab[i])
+        { index=i;
+        }
+}
+
+//console.log(index);
+//console.log($(document).scrollTop());
+ },400);
+})
+
+$(document).scroll(function(){
+//where=index;
+console.log(index);
+});
+
+
+function traitement(evenement){
+    //on a accès ici au code de la touche du clavier 
+    //via la variable evenement.which
+    //alert(evenement.which);
+if (evenement.which==38)
+{ $('#up').click();
+}
+if (evenement.which==40)
+{ $('#down').click();
+}
+
+
+}
+$(function(){
+    $(document).keyup(traitement);
+});
+	
+
+	var link=new Array();
+var where=0;
+
+        $('#up').click(function(){
+            where--;
+            if (where<0)
+            {
+                where=0;
+            }
+//            window.location.assign("#"+link[where]);
+
+    var page = $(this).attr("#"+link[where]); // Page cible
+          var speed = 750; // Durée de l'animation (en ms)
+          $('html, body').animate( { scrollTop: tab[where] }, speed ); // Go
+console.log('where:'+where);         
+        });
+
+        $('#down').click(function(){
+            if (where<link.length)
+            {
+                where++;
+            }
+//            window.location.assign("#"+link[where]);
+     var page = $(this).attr("#"+link[where]); // Page cible
+          var speed = 750; // Durée de l'animation (en ms)
+          $('html, body').animate( { scrollTop: tab[where] }, speed ); // Go     
+console.log('where:'+where);
+ });
+    </script>
+
+                
+		<script>
+			link.push("section361");
+		</script>
+            <div id="section361" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_361/hero_background1426277725.jpg&quot;); background-attachment: fixed; opacity: 1;">
+    <div class="articleSection-hero-content articleSection-hero-content-centered articleSection-light" style="left: 10%;top: 60%;">
+        <h2><p>Be the Entrepreneur you Dream to Be</p>
+</h2>
+        <p>Discover Entrepreneurship @ESCP Europe</p>
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section360");
+		</script>
+            <div id="section360" class="articleSection  articleSection-keyDigits">
+                
+                                <div class="articleSection-keyDigits-container" style="opacity: 0;">
+                        <div class="articleSection-keyDigits-content">
+                            <h2><p>If you are looking for</p>
+</h2><div class="articleSection-keyDigits-components"><ul class="small-block-grid-1"><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>1. A project-based program</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>through a learning by doing pedagogy</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>2. Entrepreneurial skills</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>in finance, marketing, coding...</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>3. Networks</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>to find your partners, mentors, investors...</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>4. Unique experiences</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>in the Madrid and NYC entrepreneurship ecosystems</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li></ul></div>
+                </div>
+                </div>
+
+            </div>
+        
+		<script>
+			link.push("section362");
+		</script>
+            <div id="section362" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_362/hero_background1426277935.jpg&quot;); background-attachment: scroll; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-centered articleSection-transparent" style="left: 10%;top: 20%;">
+        <h2><p>This is what we can do</p>
+</h2>
+        
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section365");
+		</script>
+            <div id="section365" class="articleSection  articleSection-testimonials">
+                
+                                <div class="articleSection-testimonials-container" style="opacity: 0;">
+                        <div class="articleSection-testimonials-content">
+                            <h2><p>And this is what others liked about it</p>
+</h2>
+                            <div class="articleSection-testimonials-components"><ul class="small-block-grid-2"><li><div class="articleSection-testimonials-component">
+                        <div class="articleSection-testimonials-component-quote">“</div>
+                        <div class="articleSection-testimonials-component-content"><p>ChaireEEE has an outstanding and groundbreaking pedagogy</p>
+</div>
+                        <div class="articleSection-testimonials-component-author">- Pr. Stefan Meisiek, Copehaguen Business School</div>
+                    </div></li><li><div class="articleSection-testimonials-component">
+                        <div class="articleSection-testimonials-component-quote">“</div>
+                        <div class="articleSection-testimonials-component-content"><p>It was a privilege to attend this program. It was a truly life-changing experience</p>
+</div>
+                        <div class="articleSection-testimonials-component-author">- Martin, Alumni, Madrid 2014</div>
+                    </div></li></ul></div>
+                  </div>
+                </div>
+
+            </div>
+        
+		<script>
+			link.push("section386");
+		</script>
+            <div id="section386" class="articleSection  articleSection-keyDigits">
+                
+                                <div class="articleSection-keyDigits-container" style="opacity: 0;">
+                        <div class="articleSection-keyDigits-content">
+                            <h2><p>How does it work?</p>
+</h2><div class="articleSection-keyDigits-components"><ul class="small-block-grid-2"><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>Create</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>a start-up project in 3 steps</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>Consult</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>for a rising start-up</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>Tour</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>the NYC entrepreneurship scene</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>in 4 months</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>from Sept. to Dec. 2015</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content">
+</span>
+                    </div></li></ul></div>
+                </div>
+                </div>
+
+            </div>
+        
+		<script>
+			link.push("section367");
+		</script>
+            <div id="section367" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_367/hero_background1426278974.jpg&quot;); background-attachment: fixed; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-centered articleSection-dark" style="left: 10%;top: 30%;">
+        <h2><p>Creating a Start-Up: 3-Step Pedagogy</p>
+</h2>
+        
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section368");
+		</script>
+            <div id="section368" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_368/hero_background1426279491.jpg&quot;); background-attachment: scroll; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-paragraph articleSection-transparent" style="left: 5%;top: 10%;">
+        <h2><p>Step 1: Subversive Thinking</p>
+</h2>
+        <p>Create your artwork to challenge the status quo</p>
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section369");
+		</script>
+            <div id="section369" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_369/hero_background1426280264.png&quot;); background-attachment: scroll; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-paragraph articleSection-light" style="left: 5%;top: 10%;">
+        <h2><p>Step 2: Community Building</p>
+</h2>
+        <p>From subversive questionning to the creation of a real event with social impact</p>
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section370");
+		</script>
+            <div id="section370" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_370/hero_background1426280841.jpg&quot;); background-attachment: scroll; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-paragraph articleSection-light" style="left: 5%;top: 10%;">
+        <h2><p>Step 3: Business Modeling</p>
+</h2>
+        <p>From a one-shot event to a sustainable business model</p>
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section376");
+		</script>
+            <div id="section376" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_376/hero_background1426281388.jpg&quot;); background-attachment: fixed; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-centered articleSection-transparent" style="left: 10%;top: 55%;">
+        <h2><p>Consulting: Growth-Hacking Mission</p>
+</h2>
+        
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section378");
+		</script>
+            <div id="section378" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_378/hero_background1426282644.jpg&quot;); background-attachment: scroll; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-paragraph articleSection-light" style="left: 59%;top: 63%;">
+        <h2><p>Boost the sales of a startup</p>
+</h2>
+        <p>Manage growth hacking tools</p>
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section379");
+		</script>
+            <div id="section379" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_379/hero_background1426282020.jpg&quot;); background-attachment: fixed; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-centered articleSection-dark" style="left: 10%;top: 46%;">
+        <h2><p>NYC Tour: Live the American Dream</p>
+</h2>
+        
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section389");
+		</script>
+            <div id="section389" class="articleSection  articleSection-keyDigits">
+                
+                                <div class="articleSection-keyDigits-container" style="opacity: 0;">
+                        <div class="articleSection-keyDigits-content">
+                            <h2><p>What do they become?</p>
+</h2><div class="articleSection-keyDigits-components"><ul class="small-block-grid-2"><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>1/4</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>Enptreneurs</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content"><p>Sandra Rey, Winner of the Eiffel Tower Award</p>
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>1/4</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>Intrapreneurs</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content"><p>Lucile Paisant, Marketing Director of AfriMarket</p>
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>1/4</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>Consultants</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content"><p>Baligha El Hawari, consultant at EY</p>
+</span>
+                    </div></li><li><div class="articleSection-keyDigits-component">
+                        <span class="articleSection-keyDigits-component-value"><p>1/4</p>
+</span>
+                        <span class="articleSection-keyDigits-component-title"><p>Others</p>
+</span>
+                        <span class="articleSection-keyDigits-component-content"><p>Martin Weber, Program Manager, Venture Capital</p>
+</span>
+                    </div></li></ul></div>
+                </div>
+                </div>
+
+            </div>
+        
+		<script>
+			link.push("section390");
+		</script>
+            <div id="section390" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_390/hero_background1426320828.jpg&quot;); background-attachment: fixed; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-centered articleSection-light" style="left: 10%;top: 46%;">
+        <h2><p>Winner Eiffel Tower Elevator Pitch (100k euros)</p>
+</h2>
+        <p>Sandra Rey, Alumni, Madrid 2014</p>
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section380");
+		</script>
+            <div id="section380" class="articleSection  articleSection-hero">
+                
+                                <div class="articleSection-hero-container" style="background-image: url(&quot;/data/sections/section_380/hero_background1426282852.png&quot;); background-attachment: scroll; opacity: 0;">
+    <div class="articleSection-hero-content articleSection-hero-content-centered articleSection-light" style="left: 10%;top: 60%;">
+        <h2><p>Jump into the adventure this September</p>
+</h2>
+        <p>4 months to be the Entrepreneur you dream to be!</p>
+
+    </div>
+</div>
+
+            </div>
+        
+		<script>
+			link.push("section387");
+		</script>
+            <div id="section387" class="articleSection  articleSection-keyDigits">
+                
+                                <div class="articleSection-keyDigits-container" style="opacity: 0;">
+                        <div class="articleSection-keyDigits-content">
+                            <h2><p>For more info</p>
+</h2><p><a href="http://optione.chaireeee.eu/madrid/" target="_blank">www.escp-entrepreneurship.com</a></p>
+<div class="articleSection-keyDigits-components"><ul class="small-block-grid-3"></ul></div>
+                </div>
+                </div>
+
+            </div>
+            
+                <div class="stripe">
+            <div class="container">
+                <div class="optin">
+                                        <h2>entrepreneurship@ESCP Europe</h2>
+                    <p>Discover the Entrepreneurship Specialization</p>
+                                            <div class="optin-credits">
+                            <h3>Credits</h3>
+                            <p>ChaireEEE</p>
+
+                        </div>
+                    		
+
+                    <div class="footer-social" style="display:block !important;position:relative; height: 65px;">
+                        <a href="https://twitter.com/share" target="_blank"><img style="width:39px; margin-top: 11px;" src="./entrepreneurship-escp-europe_files/395f94c.png"></a>
+
+                        <a href="http://www.facebook.com/share.php?u=http://story-makers.com/en/article/entrepreneurship-escp-europe" onclick="return fbs_click()" target="_blank"><img style="width:39px; margin-top: 11px;" src="./entrepreneurship-escp-europe_files/d10b719.png" alt=""></a>
+
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://story-makers.com/en/article/entrepreneurship-escp-europe" target="_blank"><img style="width:39px; margin-top: 11px;" src="./entrepreneurship-escp-europe_files/9b3113e.png" alt="Partager sur linkedin"></a>
+
+                                                <p id="powered_by"><a style="text-align: center; color: #2AD2C9;" href="http://storymakers.eu/" target="_blank">Created with<img style="margin-left:8px;width:50px;margin-bottom:3px;" src="./entrepreneurship-escp-europe_files/f4d1b42.png" alt="Partager sur linkedin"></a></p>
+                        <style type="text/css">#powered_by{position: absolute;top:0px;right: 0px;}</style>
+
+                                            </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    
+        
+
+        
+
+        
+        <script src="./entrepreneurship-escp-europe_files/b1f156e.js"></script>
+    
+    <script>
+        // Require app
+        var app = require('app');
+
+        // User dropdown
+        
+                                
+                var confirmAction = new app.Confirm("Are you sure that you want to perform this action?")
+                .decorate('.confirm')
+                .run();
+    </script>
+
+    
+
+
+    <script>
+                $(function() {
+            var articleSections = new app.ArticleSection()
+                    .decorate('.articleSection')
+                    .on('appear', function(sender) {
+                        sender.showContent();
+                    })
+                    .run();
+        });
+            </script>
+
+    <script>
+
+        $('a').attr('target','_blank');
+        $('#nolinksss').removeAttr('target');
+
+        $('.confirmss').removeAttr('target');
+        console.log('ok');
+    </script>
+
+
+    
+
+</body></html>
