@@ -19,34 +19,29 @@ function toad3(){
     familytoad.splice(2, 1, 'toad2');
 }
 
-    function get_pictur(){
-      var newName = document.getElementById("canvas").toDataURL();
-    xhr = new XMLHttpRequest();
-    console.log(newName);
-    console.log(encodeURI(newName));
-xhr.open('POST', '../php/get_picture.php');
+{
+  function get_pictur(){
+    var xhr = new XMLHttpRequest();
 
-xhr.setRequestHeader("Content-type", "text/plain charset=UTF-8");
-xhr.onloadend = function() {
-    if (xhr.status !== 200) {
-        alert('Request failed.  Returned status of ' + xhr.status);
-    }
-};
-xhr.send('image=' + encodeURI(newName));
-/*
-   var image = document.getElementById("canvas").toDataURL();
-
-xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0) && xhr.responseText == "OK") {
+        parent.removeChild(event.srcElement || event.target);
+      }
+    };
 xhr.open('POST', '../php/get_picture.php', true);
-xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xhr.send('image='+image);*/
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  var newName = document.getElementById("canvas").toDataURL();
+xhr.send('image=' + newName);
+
+  }
 }
+
 </script>
 
 <video id="video"></video>
 <button id="startbutton">Prendre une photo</button>
 <canvas id="canvas"></canvas>
-<button id="save" onclick="get_pictur();">save la photo</button>
+<button id="save"onclick="get_pictur();" >save la photo</button>
 
 <div id = 'familytoad'>
 <img id = 'toad1' onclick="toad1();"src = '../Pictures/toad1.png' height = '50px'>
@@ -55,23 +50,6 @@ xhr.send('image='+image);*/
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-/*$("#save").click(function()  {
-  $.ajax({
-     type: "POST",
-     url: '../php/get_picture.php',
-     dataType: 'text',
-     data:  {
-    image : document.getElementById("canvas").toDataURL()
-    }
-  });*/
-
-  //    ctx.fillStyle = 'grey';
-  //  ctx.fillRect( 0, 0, 320, 240);
-/*
-});*/
-</script>
 <script>
 (function() {
 

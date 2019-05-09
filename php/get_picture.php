@@ -2,15 +2,15 @@
 session_start();
 $data = $_POST['image'];
 
-error_log($data);
-
-$image = explode('base64,',$data);
+$data = str_replace('data:image/png;base64,','', $data);
+$data = str_replace(' ', '+', $data);
+$image = base64_decode($data);
+//$image = explode('base64,',$data);
 $path =  tempnam("../user/". $_SESSION['a_user'], "FOO").".png";
 
-var_dump($data);
 
 $f=fopen("$path","wb");
-fwrite($f,base64_decode($image[1]));
+fwrite($f,$image);
 fclose($f);
 $source = imagecreatefrompng("../Pictures/toad1.png"); // Le logo est la source
 $destination = imagecreatefrompng($path); // La photo est la destination
