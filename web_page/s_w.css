@@ -49,3 +49,16 @@ body {
 
     margin:0;
 }
+
+a.user_setting {
+    color: white;
+    background-color: #000080;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border: 2px outset #c0c0c0;
+  }
+  a.user_setting:hover {
+    background-color: #6495ED;
+    border: 2px inset #c0c0c0;
+  }

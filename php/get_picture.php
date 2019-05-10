@@ -8,11 +8,10 @@ $image = base64_decode($data);
 //$image = explode('base64,',$data);
 $path =  tempnam("../user/". $_SESSION['a_user'], "FOO").".png";
 
-
 $f=fopen("$path","wb");
 fwrite($f,$image);
 fclose($f);
-$source = imagecreatefrompng("../Pictures/toad1.png"); // Le logo est la source
+$source = imagecreatefrompng('../pictures/toad1.png'); // Le logo est la source
 $destination = imagecreatefrompng($path); // La photo est la destination
  
 $largeur_source = imagesx($source);
