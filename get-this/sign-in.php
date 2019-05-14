@@ -1,4 +1,4 @@
-<?php session_start();?>
+
 <H1>sign-in</H1>
             <form method="post" action="../php/insert.php">
                 username <input type="text" name="login"><br/>

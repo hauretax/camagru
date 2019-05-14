@@ -1,11 +1,11 @@
 <?php
 session_start();
 $data = $_POST['image'];
+require_once 'database.php';
 
 $data = str_replace('data:image/png;base64,','', $data);
 $data = str_replace(' ', '+', $data);
 $image = base64_decode($data);
-//$image = explode('base64,',$data);
 $path =  tempnam("../user/". $_SESSION['a_user'], "FOO").".png";
 
 $f=fopen("$path","wb");
@@ -22,7 +22,17 @@ $hauteur_destination = imagesy($destination);
 $destination_x = $largeur_destination - $largeur_source;
 $destination_y =  $hauteur_destination - $hauteur_source;
  
-imagecopy($destination, $source, 15, 15, 0, 0, $largeur_source, $hauteur_source);
- 
+imagecopy($destination, $source, 150, 60, 0, 0, $largeur_source, $hauteur_source);
+
 imagepng($destination, $path);
+$bdd = new database();
+$bdd->connexion();
+$path = str_replace('app', '..', $path);
+$query = $bdd->getBdd()->prepare($bdd->addpictur());
+$array = array(
+    'login' => $_SESSION['a_user'],
+    'file' => $path
+);
+$query->execute($array);
+
 ?>

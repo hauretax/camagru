@@ -14,7 +14,10 @@
             <a class = "log"><div class = "log">
                 <?php include "../get-this/log-in.php"; ?>
             </div></a>
- 
+            </div>
+    <div id = allpictur>
+        <?php include "../get-this/pictur.php"?>
+</div>
             <footer>
 
     </footer>

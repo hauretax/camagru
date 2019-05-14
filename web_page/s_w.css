@@ -62,3 +62,15 @@ a.user_setting {
     background-color: #6495ED;
     border: 2px inset #c0c0c0;
   }
+  #allpictur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #work{
+    background: radial-gradient(circle at 50%, #fff, #fff 70%, grey 100%, #fff 75%);
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 50%;
+  }

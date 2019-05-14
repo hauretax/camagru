@@ -32,6 +32,10 @@ class database{
     public function addMember(){
         return 'INSERT INTO user(login, password, mail, cle) VALUES (:login, :password, :mail, :cle)';
     }
+    public function addpictur(){
+        return 'INSERT INTO pictur(login, file) VALUES (:login, :file)';
+    }
+
 
 }
 ?>
