@@ -2,6 +2,7 @@
         <link href="s_w.css" rel="stylesheet" media="all" type="text/css">
     </header>
 <head>
+<a href="../php/delog.php" class="user_setting">unlog</a>
 <a href="../php/user_setting.php" class="user_setting">User settings</a>
 <a href="../web_page/Welcome.php" class="user_setting">accueille</a>
 </head>

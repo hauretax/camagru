@@ -12,8 +12,13 @@ div.marche{
     margin-bottom: 50px;
 }
 
-div.log{
+a.log{
+    text-align:center;
+    width:50%;
+}
+a.sign{
     text-align:center ;
+    width:50%;
 }
 
 div.head{
@@ -24,9 +29,6 @@ div.head{
     height: 100px;
 }
 
-div.sign{
-    text-align:center ;
-}
 
 h1.head {
     width: 100%;
@@ -70,13 +72,13 @@ a.user_setting {
     align-items: center;
   }
   #work{
-    width:100%;
+    width:600px;
   }
   #imgda{
     background: radial-gradient(circle at 50%, #fff, #fff 70%, grey 100%, #fff 75%);
     border-radius: 10px;
     margin-bottom: 5px;
-    width: 50%;
+    width: 600px;
 
   }
   #sendtext{
@@ -90,3 +92,7 @@ a.user_setting {
   #message{
       width: 450px;
      }
+
+    #delog{
+        position: absolute;
+    }
