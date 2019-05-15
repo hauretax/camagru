@@ -1,5 +1,5 @@
 <H2>change name</H2>
-            <form method="post" action="../php/..php">
+            <form method="post" action="../php/c_n.php">
                 newname <input type="text" name="login"><br/>
                 pasword <input type="text" name="p"><br/>
                 <input type="submit" name="submit" value="OK">
