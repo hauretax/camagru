@@ -41,7 +41,6 @@ xhr.send('image=' + newName);
 <video id="video"></video>
 <button id="startbutton">Prendre une photo</button>
 <canvas id="canvas"></canvas>
-<button id="save"onclick="get_pictur();" >save la photo</button>
 
 <div id = 'familytoad'>
 <img id = 'toad1' onclick="toad1();"src = '../Pictures/toad1.png' height = '50px'>
@@ -103,6 +102,7 @@ function takepicture() {
 startbutton.addEventListener('click', function(ev){
     takepicture();
   ev.preventDefault();
+  get_pictur();
 }, false);
 
 })();
