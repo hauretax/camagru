@@ -3,6 +3,7 @@
     </header>
 <head>
 <a href="../php/user_setting.php" class="user_setting">User settings</a>
+<a href="../web_page/Welcome.php" class="user_setting">accueille</a>
 </head>
 <div class=centre>
 <?php 

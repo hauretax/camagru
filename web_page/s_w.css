@@ -9,6 +9,7 @@ div.marche{
     top : 20px;
     height: 292px;
     border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 div.log{
@@ -69,8 +70,23 @@ a.user_setting {
     align-items: center;
   }
   #work{
+    width:100%;
+  }
+  #imgda{
     background: radial-gradient(circle at 50%, #fff, #fff 70%, grey 100%, #fff 75%);
     border-radius: 10px;
-    margin-top: 50px;
+    margin-bottom: 5px;
     width: 50%;
+
   }
+  #sendtext{
+      display: flex;
+      width:530px;
+  }
+  #text{
+      width: 450px;
+      height: 20px;
+  }
+  #message{
+      width: 450px;
+     }
