@@ -7,14 +7,18 @@ function logMember()
         $bdd = new database();
         $bdd->connexion();
         $password = hash ('whirlpool', $_POST['p']);
-        $query = $bdd->getBdd()->query('SELECT * FROM user  WHERE login = \''.$_POST['login'].'\'');
+        $query = $bdd->getBdd()->prepare('SELECT * FROM user  WHERE login like :login');
+        $query->bindValue(':login', $_POST['login']);
+        $query->execute();
         $data = $query->fetch();
+  
         if ($data['actif'] != '1'){
             $_SESSION['a_user'] = "";
             $_SESSION['error'] = "ur acount is not activated";
             header('Location: ../web_page/welcome.php');
             exit; 
         }
+        
         if ($data)
             if ($password === $data['password']){
                 $_SESSION['a_user'] = $_POST['login'];
