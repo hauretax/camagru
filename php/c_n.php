@@ -11,31 +11,53 @@ function chang_log(){
     $query->execute();
     $data = $query->fetch();
     
-    
+    echo "coucou2";
+    print_r($data);
     if ($data){
-            if ($password === $data['password']){
-                $query = $bdd->getBdd()->query('SELECT * FROM user');
-                foreach($query as $e){
-                    if($_POST['login'] === $e['login']){
+        echo "coucou";
+        if ($password === $data['password']){
+            $query = $bdd->getBdd()->query('SELECT * FROM user');
+            foreach($query as $e){
+                if($_POST['login'] === $e['login']){
                     $_SESSION['error'] = "user with this name already exist";
                     echo "ok";
                     header('Location: ../web_page/user_setting.php');
                     exit;
-                    }   
                 }
-                $stmt = $bdd->getBdd()->prepare ("UPDATE user SET login= :log WHERE login like :login ");
-                $stmt->bindParam(':login', $_SESSION['a_user']);
-                $stmt->bindParam(':log', $_POST['login']);
-                $stmt->execute();
+            }   
+            $stmt = $bdd->getBdd()->prepare ("UPDATE user SET login= :log WHERE login like :login ");
+            $stmt->bindParam(':login', $_SESSION['a_user']);
+            $stmt->bindParam(':log', $_POST['login']);
+            $stmt->execute();
+            
+            $avans = '/'.$_SESSION['a_user'].'/';
+            $apres = '/'.$_POST['login'].'/';
+            
+            $q = $bdd->getBdd()->prepare ("UPDATE pictur
+                SET file = REPLACE(file, :avans, :apres)");
+                $q->bindParam(':avans', $avans);
+                $q->bindParam(':apres', $apres);
+                $q->execute();
+                
+                $q = $bdd->getBdd()->prepare ("UPDATE pictur
+                SET login = :apres WHERE login LIKE :avans");
+                $q->bindParam(':avans', $_SESSION['a_user']);
+                $q->bindParam(':apres', $_POST['login']);
+                $q->execute();
+                
+                rename(realpath(dirname(__FILE__))."/../user/".$_SESSION['a_user'], realpath(dirname(__FILE__))."/../user/".$_POST['login']);
                 $_SESSION['a_user'] = $_POST['login'];
+                
                 $_SESSION['error'] = "user name as been sucsefull changed";
-                header('Location: ../web_page/user_setting.php');
+                echo "helo";}}}/*
+                //header('Location: ../web_page/user_setting.php');
                 exit;
             }
             $_SESSION['error'] = "bad password";
             header('Location: ../web_page/user_setting.php');
             exit;
     }
+
 }
 
 function chang_mail(){
@@ -78,7 +100,7 @@ function chang_mail(){
             exit;
     }
 }
-
+*/
 function chang_password(){
     $bdd = new database();
     $bdd->connexion();
@@ -118,5 +140,5 @@ function chang_password(){
         chang_mail();
     if (isset ($_POST['C_P']))
         chang_password();
-header('Location: ../web_page/user_setting.php');
+//header('Location: ../web_page/user_setting.php');
 ?>
