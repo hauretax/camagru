@@ -49,15 +49,10 @@ function chang_log(){
                 $_SESSION['a_user'] = $_POST['login'];
                 
                 $_SESSION['error'] = "user name as been sucsefull changed";
-                echo "helo";}}}/*
-                //header('Location: ../web_page/user_setting.php');
+                echo "helo";}
+                header('Location: ../web_page/user_setting.php');
                 exit;
-            }
-            $_SESSION['error'] = "bad password";
-            header('Location: ../web_page/user_setting.php');
-            exit;
-    }
-
+        }
 }
 
 function chang_mail(){
@@ -100,7 +95,7 @@ function chang_mail(){
             exit;
     }
 }
-*/
+
 function chang_password(){
     $bdd = new database();
     $bdd->connexion();
@@ -140,5 +135,5 @@ function chang_password(){
         chang_mail();
     if (isset ($_POST['C_P']))
         chang_password();
-//header('Location: ../web_page/user_setting.php');
+header('Location: ../web_page/user_setting.php');
 ?>
