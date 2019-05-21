@@ -22,7 +22,7 @@ $hauteur_destination = imagesy($destination);
 $destination_x = $largeur_destination - $largeur_source;
 $destination_y =  $hauteur_destination - $hauteur_source;
  
-imagecopy($destination, $source, 150, 60, 0, 0, $largeur_source, $hauteur_source);
+imagecopy($destination, $source, 4, 180, 0, 0, $largeur_source, $hauteur_source);
 
 imagepng($destination, $path);
 $bdd = new database();
