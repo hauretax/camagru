@@ -1,25 +1,22 @@
 <script>
-var familytoad = ['t', 't', 't'];
-function toad1(){
-  if (familytoad[0] == 'toad1')
-      familytoad.splice(0, 1, 't');
-  else
-    familytoad.splice(0, 1, 'toad1');
-}
-function toad2(){
-  if (familytoad[1] === 'toad2')
-      familytoad.splice(1, 1, 't');
-  else
-    familytoad.splice(1, 1, 'toad2');
-}
-function toad3(){
-  if (familytoad[2] === 'toad2')
-      familytoad.splice(2, 1, 't');
-  else
-    familytoad.splice(2, 1, 'toad2');
-}
 
-{
+var filtre = null;
+function toad(div){
+  var toaad =  div.getAttribute('id');
+  console.log(toaad);
+  if (filtre != toaad)
+      {
+       filtre = toaad;
+       document.getElementById("filtre").style.display = "block";
+       document.getElementById("filtre").style.backgroundImage= "url(\'../Pictures/"+toaad+".png\')";
+      }
+    else{
+    document.getElementById("filtre").style.display = "none";
+    filtre = null;
+    }
+  }
+
+
   function get_pictur(){
     var xhr = new XMLHttpRequest();
 
@@ -31,22 +28,23 @@ xhr.onreadystatechange = function() {
 xhr.open('POST', '../php/get_picture.php', true);
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   var newName = document.getElementById("canvas").toDataURL();
-xhr.send('image=' + newName);
+xhr.send('image=' + newName + '&toad=../Pictures/' + filtre + '.png');
 
   }
-}
 
 </script>
+<div id = "finalpictur">
+  <video id="video"></video>
+  <div id ="filtre"></div>
+  <button id="startbutton">Prendre une photo</button>
+  <canvas id="canvas"></canvas>
 
-<video id="video"></video>
-<button id="startbutton">Prendre une photo</button>
-<canvas id="canvas"></canvas>
-
-<div id = 'familytoad'>
-<img id = 'toad1' onclick="toad1();"src = '../Pictures/toad1.png' height = '50px'>
-<img id = 'toad2' onclick="toad2();"src = '../Pictures/toad2.png' height = '50px'>
-<img id = 'toad3' onclick="toad3();"src = '../Pictures/toad3.png' height = '50px'>
-
+  <div id = 'familytoad'>
+    <img id = 'toad1' onclick="toad(this);"src = '../Pictures/toad1.png' height = '50px'>
+    <img id = 'toad2' onclick="toad(this);"src = '../Pictures/toad2.png' height = '50px'>
+    <img id = 'toad3' onclick="toad(this);"src = '../Pictures/toad3.png' height = '50px'>
+    
+  </div>
 </div>
 
 <script>
