@@ -1,6 +1,19 @@
-<script>
+<div id = "finalpictur">
+  <video id="video"></video>
+  <div id ="filtre"></div>
+  <button id="startbutton">Prendre une photo</button>
+  <canvas id="canvas"></canvas>
 
-var filtre = null;
+  <div id = 'familytoad'>
+    <img id = 'toad1' onclick="toad(this);"src = '../Pictures/toad1.png' height = '50px'>
+    <img id = 'toad2' onclick="toad(this);"src = '../Pictures/toad2.png' height = '50px'>
+    <img id = 'toad3' onclick="toad(this);"src = '../Pictures/toad3.png' height = '50px'>
+    
+  </div>
+</div>
+
+<script>
+  var filtre = null;
 function toad(div){
   var toaad =  div.getAttribute('id');
   console.log(toaad);
@@ -32,22 +45,6 @@ xhr.send('image=' + newName + '&toad=../Pictures/' + filtre + '.png');
 
   }
 
-</script>
-<div id = "finalpictur">
-  <video id="video"></video>
-  <div id ="filtre"></div>
-  <button id="startbutton">Prendre une photo</button>
-  <canvas id="canvas"></canvas>
-
-  <div id = 'familytoad'>
-    <img id = 'toad1' onclick="toad(this);"src = '../Pictures/toad1.png' height = '50px'>
-    <img id = 'toad2' onclick="toad(this);"src = '../Pictures/toad2.png' height = '50px'>
-    <img id = 'toad3' onclick="toad(this);"src = '../Pictures/toad3.png' height = '50px'>
-    
-  </div>
-</div>
-
-<script>
 (function() {
 
 var streaming = false,

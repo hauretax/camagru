@@ -11,7 +11,7 @@
 session_start();
 echo "WELCOME : ";
 echo  $_SESSION['a_user'];
-
+echo "<div id=\"body\">"
 ?>
             <?php include "../script/cam.php"; ?>  
             <form method="post" action="../php/get_picture.php">
@@ -25,7 +25,8 @@ $bdd->connexion();
 $stmt = $bdd->getBdd()->query("SELECT * FROM pictur where login like \"".$_SESSION['a_user']."\"");
 $tab = array();
 while ($e = $stmt->fetch())
-	array_unshift ($tab, "<img id = \"work\"src=".$e['file'].">");
+	array_unshift ($tab, "<img id = \"wok\"src=".$e['file'].">");
 foreach($tab as $e)
     echo $e;?>
+
 </div>    
