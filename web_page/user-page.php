@@ -1,3 +1,12 @@
+<?PHP
+session_start();
+if ($_SESSION['a_user'] === "")
+    {
+        header('Location: ../web_page/welcome.php');
+        exit;
+    }
+?>
+
 <header>
         <link href="s_w.css" rel="stylesheet" media="all" type="text/css">
     </header>
@@ -8,9 +17,6 @@
 </head>
 <div class=centre>
 <?php 
-session_start();
-echo "WELCOME : ";
-echo  $_SESSION['a_user'];
 echo "<div id=\"body\">"
 ?>
             <?php include "../script/cam.php"; ?>  

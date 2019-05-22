@@ -124,3 +124,7 @@ a.user_setting {
     #centre{
         display: flex;
     }
+    img.heart{
+        width : 20px;
+        height: 20px;
+    }

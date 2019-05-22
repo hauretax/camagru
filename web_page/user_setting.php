@@ -1,3 +1,11 @@
+<?PHP
+session_start();
+if ($_SESSION['a_user'] === "")
+    {
+        header('Location: ../web_page/welcome.php');
+        exit;
+    }
+?>
 <?php session_start();?>
 <H1>Helo <?php echo $_SESSION['a_user']?> <H1>
 <H2>change name</H2>
