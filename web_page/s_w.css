@@ -117,7 +117,7 @@ a.user_setting {
         background-repeat: no-repeat;
         background-size: auto;
         left:4px;
-        top:182px;
+        top:210px;
         width:60px;
         height: 58px;
     }
@@ -125,6 +125,26 @@ a.user_setting {
         display: flex;
     }
     img.heart{
-        width : 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+    }
+    #block-it{
+        position: absolute;
+        width: 113px;
+     
+        height: 17px;
+        top: 272px;
+    }
+    #video{
+        width: 358px;
+        height: 271px;
+    }
+    #test{
+        
+        width: 27px;
+        height: 27px;
+        z-index: 1;
+        
+ 
     }

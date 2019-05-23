@@ -1,4 +1,10 @@
 function heart(id){
+  console.log(id)
+  var pictur = id.getAttribute('src');
+  if (pictur === '../image/red.png')
+    id.setAttribute("src","../image/coeur.svg");
+  else
+    id.setAttribute("src","../image/red.png");
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {

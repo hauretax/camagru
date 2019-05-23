@@ -6,7 +6,7 @@ $bdd = new database();
 $bdd->connexion();
 $stmt = $bdd->getBdd()->query("SELECT * FROM pictur");
 $tab = array();
-$id = 0;
+
 
 while ($e = $stmt->fetch()){
     array_unshift ($tab, "<div id = \"imgda\">
@@ -18,9 +18,9 @@ while ($e = $stmt->fetch()){
     <input type=\"submit\" name=\"submit\" value=\"OK\">
     <img id = \"".$e['id']."\" class = \"heart\"  src=\"../image/coeur.svg\" onclick= \"heart(this)\">
     </form>
+    
     </div>");
-    echo $e['id'];
-$id++;
+
 }
 foreach($tab as $e){
     echo $e;

@@ -2,6 +2,7 @@
   <video id="video"></video>
   <div id ="filtre"></div>
   <button id="startbutton">Prendre une photo</button>
+  <div id="block-it"></div>
   <canvas id="canvas"></canvas>
 
   <div id = 'familytoad'>
@@ -21,10 +22,12 @@ function toad(div){
       {
        filtre = toaad;
        document.getElementById("filtre").style.display = "block";
+       document.getElementById("block-it").style.display = "none";
        document.getElementById("filtre").style.backgroundImage= "url(\'../Pictures/"+toaad+".png\')";
       }
     else{
     document.getElementById("filtre").style.display = "none";
+    document.getElementById("block-it").style.display = "block";
     filtre = null;
     }
   }
