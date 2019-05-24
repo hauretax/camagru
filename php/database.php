@@ -33,7 +33,7 @@ class database{
         return 'INSERT INTO user(login, password, mail, cle) VALUES (:login, :password, :mail, :cle)';
     }
     public function addpictur(){
-        return 'INSERT INTO pictur(login, file) VALUES (:login, :file)';
+        return 'INSERT INTO pictur(login, file, who_like) VALUES (:login, :file, :who)';
     }
 
 

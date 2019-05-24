@@ -2,7 +2,7 @@
   <video id="video"></video>
   <div id ="filtre"></div>
   <button id="startbutton">Prendre une photo</button>
-  <div id="block-it"></div>
+  <div id="block-it" onclick="alert('selectionner un sticker svp');"></div>
   <canvas id="canvas"></canvas>
 
   <div id = 'familytoad'>

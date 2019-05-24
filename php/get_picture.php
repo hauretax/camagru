@@ -31,7 +31,8 @@ $path = str_replace('app', '..', $path);
 $query = $bdd->getBdd()->prepare($bdd->addpictur());
 $array = array(
     'login' => $_SESSION['a_user'],
-    'file' => $path
+    'file' => $path,
+    'who' => ""
 );
 $query->execute($array);
 
