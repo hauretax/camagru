@@ -74,6 +74,7 @@ a.user_setting {
   }
   #wok{
     width:150px;
+    padding: 20px;
   }
   #work{
     width:600px;
@@ -104,7 +105,7 @@ a.user_setting {
     #finalpictur{
         position: relative;
         margin :0 auto; 
-        width: 320px;
+        width: 358px;
     }
     canvas{
         display:none;
@@ -121,7 +122,7 @@ a.user_setting {
         width:60px;
         height: 58px;
     }
-    #centre{
+    div.centre{
         display: flex;
     }
     img.heart{
@@ -147,4 +148,10 @@ a.user_setting {
         z-index: 1;
         
  
+    }
+
+    #u_p{
+        width: 500px;
+        height: 600px;
+        overflow:auto;
     }

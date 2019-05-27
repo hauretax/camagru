@@ -1,8 +1,8 @@
 <?PHP
 session_start();
-if ($_SESSION['a_user'] === "")
+if ($_SESSION['a_user'] === "" || !(isset($_SESSION['a_user'])))
     {
-        header('Location: ../web_page/welcome.php');
+        header('Location: ../web_page/Welcome.php');
         exit;
     }
 ?>

@@ -18,17 +18,16 @@
 function toad(div){
   var toaad =  div.getAttribute('id');
   console.log(toaad);
-  if (filtre != toaad)
-      {
+  if (filtre != toaad){
        filtre = toaad;
        document.getElementById("filtre").style.display = "block";
        document.getElementById("block-it").style.display = "none";
        document.getElementById("filtre").style.backgroundImage= "url(\'../Pictures/"+toaad+".png\')";
       }
     else{
-    document.getElementById("filtre").style.display = "none";
-    document.getElementById("block-it").style.display = "block";
-    filtre = null;
+      document.getElementById("filtre").style.display = "none";
+      document.getElementById("block-it").style.display = "block";
+      filtre = null;
     }
   }
 
@@ -37,8 +36,8 @@ function toad(div){
     var xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0) && xhr.responseText == "OK") {
-        parent.removeChild(event.srcElement || event.target);
+      if (xhr.readyState == 4 && (xhr.status == 200 || xhr.status == 0)) {
+        document.location.reload(true);
       }
     };
 xhr.open('POST', '../php/get_picture.php', true);
@@ -91,6 +90,7 @@ video.addEventListener('canplay', function(ev){
 }, false);
 
 function takepicture() {
+
   canvas.width = width;
   canvas.height = height;
   canvas.getContext('2d').drawImage(video, 0, 0, width, height);
