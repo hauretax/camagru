@@ -71,6 +71,7 @@ a.user_setting {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
   }
   #wok{
     width:150px;
@@ -154,4 +155,22 @@ a.user_setting {
         width: 500px;
         height: 600px;
         overflow:auto;
+    }
+    footer{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    }
+    #footer{
+
+        height: 50px;
+        font-size: 0.05em;
+        text-align: center;
+        width: 100%;
+        background-image: linear-gradient(pink, purple);
+        z-index: -1000;
+    }
+
+    #CENTRER{
+        text-align: center;
     }

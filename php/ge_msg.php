@@ -22,7 +22,8 @@ function new_message(){
                 ---------------
                 Ceci est un mail automatique, Merci de ne pas y repondre.';
                 $headers = "From:" . $from;
-                mail($mail['mail'],$subject,$message,$headers);
+                if($mail['actif'] !== '2')
+                    mail($mail['mail'],$subject,$message,$headers);
 
 
         $text = "<p>".$_SESSION['a_user']." : ".$_POST['text']."</p>";

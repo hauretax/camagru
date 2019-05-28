@@ -12,7 +12,7 @@ function logMember()
         $query->execute();
         $data = $query->fetch();
   
-        if ($data['actif'] != '1'){
+        if ($data['actif'] !== '1' && $data['actif'] !== '2'){
             $_SESSION['a_user'] = "";
             $_SESSION['error'] = "ur acount is not activated";
             header('Location: ../web_page/welcome.php');

@@ -5,7 +5,7 @@
         <link href="s_w.css" rel="stylesheet" media="all" type="text/css">
     </header>
     <div class=head>
-        <h1 class = "head">insta like,     bro!!!</h1>
+        <h1 class = "head">CAMAGRU!!!</h1>
             <?php if($_SESSION['a_user'] !== ""|| !(isset($_SESSION['a_user']))){?>
     <a href="../php/delog.php" style="position: absolute; left:0; top:0;" class="user_setting">unlog</a>
     <a href="../web_page/user-page.php" style="position: absolute; right:0; top:0;" class="user_setting">Your page</a>
@@ -26,7 +26,5 @@
     <div id = allpictur>
         <?php include "../get-this/pictur.php"?>
 </div>
-            <footer>
-
-    </footer>
+            <footer><div id='footer'><h1>projet by : hutricot</h1></div></footer>
 </html
