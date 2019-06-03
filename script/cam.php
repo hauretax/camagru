@@ -1,6 +1,8 @@
 <div id = "finalpictur">
-  <video id="video"></video>
+  <div id = "newbox">
+  <video id="video" class = "video"></video>
   <div id ="filtre"></div>
+  </div>
   <button id="startbutton">Prendre une photo</button>
 
   <div id="block-it" onclick="alert('selectionner un sticker svp');"></div>
@@ -118,6 +120,7 @@ function selectImage(afterSelection) {
     var inputFile = document.createElement('input');
     inputFile.type = 'file';
     inputFile.accept = 'image/*';
+    inputFile.id = "ipfile";
     inputFile.addEventListener('change', function () {
         if (afterSelection) {
           var reader = new FileReader();
@@ -179,7 +182,7 @@ function reduceImage(imageSource, afterResizing) {
     upload = '1';
 }
 
-var body = document.getElementById('finalpictur');
+var body = document.getElementById('newbox');
 body.appendChild(
     selectImage(function (inputFile) {
         readImage(inputFile, function (image) {

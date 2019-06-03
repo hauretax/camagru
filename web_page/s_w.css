@@ -68,13 +68,14 @@ a.user_setting {
  
   #allpictur{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-bottom: 100px;
   }
   #wok{
     width:150px;
+    margin-left: 20px;
     padding: 20px;
   }
   #work{
@@ -140,7 +141,14 @@ a.user_setting {
     }
     #video{
         width: 358px;
-        height: 271px;
+    }
+
+    #ipfile{
+        position: absolute;
+    width: 78px;
+    height: 17px;
+    top: 270.5px;
+    right: 113px;
     }
     #test{
         
@@ -173,4 +181,10 @@ a.user_setting {
 
     #CENTRER{
         text-align: center;
+    }
+    #newbox{
+        height: 271px;
+    }
+    .video{
+        height: 271px;
     }
