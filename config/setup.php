@@ -1,12 +1,14 @@
 <?PHP
-require 'database.php';
-function setup($dbh,$dbname)
-{
-    $sql  = "CREATE DATABASE IF NOT EXISTS".$dbname;
-    $result = $dbh->exec($sql);
+require_once 'database.php';
 
-    $sql ="USE ".$dbname;
-    $resulte = $dbh->exec($sql);
+
+function set($dbh,$dbname)
+{
+  $sql  = "CREATE DATABASE IF NOT EXISTS ".$dbname;
+  $result = $dbh->exec($sql);
+
+  $sql ="USE ".$dbname;
+  $resulte = $dbh->exec($sql);
 
     $sql  = "CREATE TABLE `user` (
         `id` int(11) NOT NULL,
@@ -27,15 +29,17 @@ function setup($dbh,$dbname)
         `comment` text
       ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
     $resulte = $dbh->exec($sql);
-}
-$dsn = "mysql:host=". DB_HOST;
-$db = new PDO ($dsn, $DB_USER, $DB_PASSWORD);
-//$db->setAttribute(PDO:: ATTR_ERRMODE, PDO::EERMODE_EXCEPTION);
-setup($db, $DB_NAME);
-echo 'setup completed'.PHP_EOL;
-/*
+}/*
+$dsn = "mysql:host=".$DB_HOST;
+$db = new PDO( $dsn,$DB_USER,$DB_PASSWORD);
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+setup($db,$DB_NAME);
+echo 'setup completed'.PHP_EOL;*/
+
 $bdd = new database();
 $bdd->connexion();
-setup($bdd, 'camagru');
-echo 'setup completed'.PHP_EOL;*/
+$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+set($bdd, 'camagru');
+
+echo 'setup completed';
 ?>

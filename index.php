@@ -1,3 +1,3 @@
 <?php
-header('Location: ../camagru/web_page/Welcome.php');
+header('Location: /web_page/Welcome.php');
 ?>
