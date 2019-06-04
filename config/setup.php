@@ -1,5 +1,5 @@
 <?PHP
-require '../php/database.php';
+require 'database.php';
 function setup($dbh,$dbname)
 {
     $sql  = "CREATE DATABASE IF NOT EXISTS".$dbname;
@@ -28,9 +28,14 @@ function setup($dbh,$dbname)
       ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
     $resulte = $dbh->exec($sql);
 }
-
+$dsn = "mysql:host=". DB_HOST;
+$db = new PDO ($dsn, $DB_USER, $DB_PASSWORD);
+//$db->setAttribute(PDO:: ATTR_ERRMODE, PDO::EERMODE_EXCEPTION);
+setup($db, $DB_NAME);
+echo 'setup completed'.PHP_EOL;
+/*
 $bdd = new database();
 $bdd->connexion();
 setup($bdd, 'camagru');
-echo 'setup completed'.PHP_EOL;
+echo 'setup completed'.PHP_EOL;*/
 ?>
